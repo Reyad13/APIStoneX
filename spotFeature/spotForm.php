@@ -9,16 +9,8 @@
     <body>
     <header>
         <div class="user-info">
-            <img src="../../img/logo.png" alt="Logo de l'entreprise" class="logo">
             <div class="user-details">
                 <div class="user-name">StoneX</div>
-            </div>
-        </div>
-        <div class="navbar">
-            <div class="logout-button">
-                <a href="../loginLogout/logout.php" class="navbar-button">
-                    Déconnexion
-                </a>
             </div>
         </div>
     </header>
