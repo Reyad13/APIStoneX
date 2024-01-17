@@ -1,6 +1,9 @@
 <?php
 include_once('../db_connect/db_connection.php');
 
+
+///// A CHANGER POUR MYSAAMP , ClOrdID doit être UNIQUE et être : concaténation de cl_ident sur 5 caractères et "_" et la date et l'heure aaaaMMjjhhmmss /////
+
     $query = "SELECT MAX(ClOrdID) AS lastClOrdID FROM spotope";
     $result = $con->query($query);
 
@@ -17,6 +20,9 @@ include_once('../db_connect/db_connection.php');
     $clOrdID = ++$lastClOrdID;
     //echo "xx $lastClOrdID et $clOrdID";
     $con->close();
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
     $pair = isset($_GET['pair']) ? $_GET['pair'] : null;
     $deal = isset($_GET['deal']) ? $_GET['deal'] : null;
