@@ -1,5 +1,5 @@
 <?php
-    // Reste du code pour la soumission avec le nouveau ClOrdID...
+
     $pair = $_POST['pair'];
     $deal = isset($_POST['deal']) ? $_POST['deal'] : null;
     if ($deal == 1){

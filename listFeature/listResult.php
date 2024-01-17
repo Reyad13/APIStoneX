@@ -36,18 +36,15 @@
 
             // Vérifie si la réponse de l'API est valide
             if (isset($response_data['result'])) {
-                // Affiche les détails de l'opération
                 $result = $response_data['result'];
                 echo '<p>ID de la transaction: ' . $result['EXID'] . '</p>';
                 echo '<p>Status : ' . $result['Status'] . ' Ounces</p>';
                 echo '<p>FillPrice : ' . $result['FillPrice'] . '</p>';
             } else {
-                // Affiche un message d'erreur si la réponse n'est pas valide
                 echo '<p>Erreur dans la réponse de l\'API</p>';
             }
             ?>
 
-            <!-- Bouton pour retourner à index.php -->
             <a href="../index.php" class="button">Retour à l'accueil</a>
         </div>
     </body>

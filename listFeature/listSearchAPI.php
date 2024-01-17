@@ -23,7 +23,6 @@
     // Exécute la requête cURL et récupère la réponse
     $response = curl_exec($ch);
 
-    // Vérifie s'il y a des erreurs
     if (curl_errno($ch)) {
         echo 'Erreur cURL : ' . curl_error($ch);
     } else {

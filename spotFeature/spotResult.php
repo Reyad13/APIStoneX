@@ -1,7 +1,3 @@
-<?php
-    include_once('../db_connect/db_connection.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,15 +55,6 @@
             $taux_final = $result['Rate'];
             $coutTotal = $result['Quantity'] * $result['Rate'];
             echo '<p>Coût total : ' . $coutTotal . ' €</p>';
-            //// requete insert commande info (pour test uniquement)
-            $sql = "INSERT INTO spotope (Paire, TypeTransaction, Quantite, Taux, CoutTotal, IDTransaction, ClOrdID) VALUES (?, ?, ?, ?, ?, ?, ?)";
-                $stmt = $con->prepare($sql);
-                $stmt->bind_param("sssdiii", $pair, $deal, $result['Quantity'], $result['Rate'], $coutTotal, $result['EXID'], $clOrdID);
-                $stmt->execute();
-                if ($stmt->error) {
-                    echo '<p>Erreur lors de l\'insertion dans la base de données : ' . $stmt->error . '</p>';
-                }
-                $stmt->close();
         } else {
             echo '<p>Erreur dans la réponse de l\'API</p>';
         }
